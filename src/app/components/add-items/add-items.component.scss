@@ -1,0 +1,89 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto 2vh auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+  }
+
+  h4 {
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(228, 217, 217), 0 0 1em rgb(215, 215, 224), 0 0 0.2em rgb(35, 35, 37);
+    margin-bottom: 2vh;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
+
+  input[placeholder] {
+    font-size: 12px;
+  }
+
+  strong {
+    color: rgb(45, 45, 196);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: #1a8d33;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .box-btn-Edit{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    
+  
+    button.cancel {
+      background-color: #dc3545;
+
+      &:hover {
+        background-color: #962a34;
+      }
+    }
+    
+  }
