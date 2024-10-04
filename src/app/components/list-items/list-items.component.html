@@ -1,6 +1,7 @@
 <app-add-items></app-add-items>
 <div class="list-container">
-    <h4>lista de compras</h4>
+    <h4>lista de compras 📋</h4>
+    <h6><strong>💸 Total:</strong> {{totalPrice | currency:'BRL'}}</h6>
 
     <ul *ngIf="items.length > 0; else noItems">
         <li *ngFor="let item of items; let i =  index" >
@@ -15,7 +16,7 @@
     </ul>
 
     <ng-template #noItems>
-        <p>A lista de compras está vazia. Adicione algum item</p>
+        <p>A lista de compras está vazia. Adicione algum item 🍇</p>
     </ng-template>
 </div>
 <app-buy-item (itemRemoved)="loadItems()"></app-buy-item>

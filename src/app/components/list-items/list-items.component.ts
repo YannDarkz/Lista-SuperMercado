@@ -14,6 +14,8 @@ import { BuyItemComponent } from '../buy-item/buy-item.component';
 export class ListItemsComponent implements OnInit {
   items: Array<{ name: string, price: number }> = []
 
+  totalPrice: number = 0
+
   @Input() loadBuyItems = new EventEmitter<void>()
 
 
@@ -24,6 +26,7 @@ export class ListItemsComponent implements OnInit {
   ngOnInit(): void {
     this.loadItems()
     // this.clearListBuy()
+    // this.clearList()
   }
 
   ngAfterViewInit(): void {
@@ -35,8 +38,14 @@ export class ListItemsComponent implements OnInit {
   loadItems(): void {
     const storedItems = localStorage.getItem('listaCompras')
     if (storedItems) {
-      this.items = JSON.parse(storedItems)
+      this.items = JSON.parse(storedItems);
+      this.calculateTotalPrice();
     }
+  }
+
+  calculateTotalPrice(): void {
+    this.totalPrice = this.items.reduce((acc, item) => acc + item.price, 0);
+
   }
 
   editItem(item: any, index: number): void {

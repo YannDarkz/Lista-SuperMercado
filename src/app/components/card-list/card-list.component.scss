@@ -11,6 +11,7 @@
 
 
 h3 {
+    padding-bottom: 1vh;
     margin: 0 0 1vh 0;
     font-size: 15px;
     border-bottom: 1px solid #333;
@@ -18,7 +19,7 @@ h3 {
 }
 
 p {
-    margin: 5px 0 0;
+    margin: 5px 0 2vh 0;
     color: #333;
     font-size: 13px;
 }
@@ -43,6 +44,10 @@ button.buy {
     position: absolute;
     top: -15px;
     right: 0px;
+
+    .img-svg {
+        width:  15px;
+    }
 }
 
 button.edit {

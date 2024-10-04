@@ -12,6 +12,7 @@ import { CardBuyItemComponent } from '../card-buy-item/card-buy-item.component';
 export class BuyItemComponent implements OnInit {
 
   purchasedItems: Array<{name: string, price: number}> = [];
+  buyPrice: number = 0
 
   @Output() itemRemoved = new EventEmitter<void>();
 
@@ -24,6 +25,12 @@ export class BuyItemComponent implements OnInit {
     if (storePurchasedItems) {
       this.purchasedItems = JSON.parse(storePurchasedItems);
     }
+    this.calculateTotalPrice()
+  }
+
+  calculateTotalPrice(): void {
+    this.buyPrice = this.purchasedItems.reduce((acc, item) => acc + item.price, 0);
+
   }
 
   removeFromPurchasedItems(index: number): void {
