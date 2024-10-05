@@ -23,13 +23,9 @@
 - Após entrar no site, comece adicionando o produto na lista de itens:
    - Após o envio do Produto, o site salva e renderiza o produto adicionado.
 - Com produto(s) adicionado(s), você pode excluir ou editar qualquer produto cadastrado.
-- para Marcar os itens como adquiridos
+- Para Marcar os itens ta lista como adquiridos é preciso clicar no botão `add 🛒`
 
-
-  
-
-
-### criação passo a passo
+### criação passo a passo resumido
 - Passo 1:
 - Criar um novo componente chamado `add-items.component.ts`. 
 - Ajustar o template e a lógica para enviar os dados dos items para o `LocalStrorage`.
@@ -44,4 +40,10 @@
 - Passo 3
 - Criar um novo componente chamado `buy-items.component.ts`, reponsavel em selecionar aqueles itens do evento `comprar()` disparado atravez do botão `comprar`.
 - criar um novo componente chamado `card-buy-item` para iterar com o itens comprados, e nele ja conter todo o temblate relativo ao card dos itens comprados.
+
+### Preview 
+
+![Demonstração do Projeto](./src/images/lista-de-compras.gif)
+
+
 
