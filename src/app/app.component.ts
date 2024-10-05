@@ -12,5 +12,11 @@ import { BuyItemComponent } from './components/buy-item/buy-item.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'lista-de-compras_Angular';
+  title = '';
+  notifyAddItem(): void {
+    this.title = 'adcionado com sucesso'
+    setTimeout(() => {
+      this.title = ''
+    },2000)
+  }
 }
