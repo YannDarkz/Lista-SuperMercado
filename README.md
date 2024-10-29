@@ -41,6 +41,8 @@
 - Criar um novo componente chamado `buy-items.component.ts`, reponsavel em selecionar aqueles itens do evento `comprar()` disparado atravez do botão `comprar`.
 - criar um novo componente chamado `card-buy-item` para iterar com o itens comprados, e nele ja conter todo o temblate relativo ao card dos itens comprados.
 
+###### Implementação de Icones de Código Unicode decimal, exemplo: `&#128512;` para 😀.
+
 ### Preview 
 
 ![Demonstração do Projeto](./src/images/lista-de-compras.gif)
