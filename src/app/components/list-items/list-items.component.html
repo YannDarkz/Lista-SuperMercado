@@ -1,4 +1,4 @@
-<app-add-items></app-add-items>
+<app-add-items (notifyAddItem)="onNotifyAddItem()" (notifyEditItem)="onNotifyUpdatedItem()"></app-add-items>
 <div class="list-container">
     <h4>lista de compras 📋</h4>
     <h6><strong>💸 Total:</strong> {{totalPrice | currency:'BRL'}}</h6>
