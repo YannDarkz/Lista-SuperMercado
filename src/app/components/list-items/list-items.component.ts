@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, ViewChild, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardListComponent } from '../card-list/card-list.component';
 import { AddItemsComponent } from '../add-items/add-items.component';
@@ -16,7 +16,11 @@ export class ListItemsComponent implements OnInit {
 
   totalPrice: number = 0
 
-  @Input() loadBuyItems = new EventEmitter<void>()
+  // @Input() loadBuyItems = new EventEmitter<void>()
+  @Output() notifyAddItem = new EventEmitter<void>()
+  @Output() notifyUpdatedItem = new EventEmitter<void>()
+  @Output() notifyRemoveItem = new EventEmitter<void>()
+
 
 
 
@@ -63,6 +67,7 @@ export class ListItemsComponent implements OnInit {
     storedItems.splice(index, 1);
     localStorage.setItem('listaCompras', JSON.stringify(storedItems));
     this.loadItems();
+    this.notifyRemoveItem.emit()
   }
 
   clearList(): void {
@@ -80,9 +85,18 @@ export class ListItemsComponent implements OnInit {
 
   }
 
-  onLoadBuyItems(): void {
-    this.loadBuyItems.emit()
+  onNotifyAddItem(): void {
+    this.notifyAddItem.emit()
+
   }
+
+  onNotifyUpdatedItem(): void {
+    this.notifyUpdatedItem.emit()
+  }
+
+  // onLoadBuyItems(): void {
+  //   this.loadBuyItems.emit()
+  // }
 
 
   clearListBuy(): void {
